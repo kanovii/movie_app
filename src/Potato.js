@@ -1,8 +1,8 @@
 
 
-function Potato({fav}) {
+function Potato({name}) {
     return(
-        <h3>i love {fav} </h3>
+        <h3>i love {name} </h3>
     )
 }
 

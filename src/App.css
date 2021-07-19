@@ -1,0 +1,15 @@
+.App {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.App_food {
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px 2px rgba(85, 57, 57, 0.3);
+    padding: 20px;
+    margin: 20px;
+    color: rgb(48, 45, 42);
+}

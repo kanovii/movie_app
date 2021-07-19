@@ -1,33 +1,30 @@
+import React from "react";
 import Potato from "./Potato";
+import PropTypes from "prop-types";
+import "./App.css";
 
-const foodILike = [
-  {
-    name: 'chicken',
-    price: '20000won'
-  },
-  {
-    name: 'lamb',
-    price: '20000won'
 
+
+class App extends React.Component {
+  state = {
+    isLoading: true,
   }
-]
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({isLoading: false});
+    },3000);
+  }
+  render() {
+    const {isLoading} = this.state;
 
-function Food({name, price}) {
-  return (
-    <div>
-      i like a {name} and it's {price}
-    </div>
-  )
-}
-
-function App() {
-  return (
-    <div className="App">
-      {foodILike.map(items => 
-        <Food name={items.name} price={items.price} />
-      )}
-    </div>
-  );
+    return (
+      <div>
+        {isLoading ? "Loading..." : "we are ready"}
+      </div>
+      
+    )
+  }
 }
 
 export default App;
+
